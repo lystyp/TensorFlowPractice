@@ -1,0 +1,20 @@
+參考
+https://omid.al/posts/2017-02-20-Tutorial-Build-Your-First-Tensorflow-Android-App.html
+
+
+原本的code 有個error
+參考https://gist.github.com/omimo/5d393ed5b64d2ca0c591e4da04af6009的下面
+
+The script "prep_model_tf1.py" has an issue when running it. It give the following error message:
+'utf-8' codec can't decode byte 0x80 in position 98: invalid start byte
+What cause this error is the fact than the file needs to be read in Binary.
+
+So just change from "r" (read):
+with tf.gfile.Open(output_frozen_graph_name, "r") as f:
+data = f.read()
+input_graph_def.
+
+To "rb" (read binary):
+with tf.gfile.Open(output_frozen_graph_name, "rb") as f:
+data = f.read()
+input_graph_def.

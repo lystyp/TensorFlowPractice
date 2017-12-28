@@ -1,0 +1,9 @@
+# 使用 inspect_checkpoint.py tool 來印出 ckpt 檔
+python inspect_checkpoint.py --file_name=/tmp/model/model.ckpt
+
+inspect_checkpoint.py 放在
+D:\Python\tensorflow-master\tensorflow\contrib\learn\python\learn\utils
+or
+D:\Python\tensorflow-master\tensorflow\python\tools
+
+http://ithelp.ithome.com.tw/articles/10187786
